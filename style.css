@@ -2,6 +2,7 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
+    margin: 0;
   }
   section{
     min-height: 100vh;
@@ -82,6 +83,11 @@ nav ul li a:hover{
     font-size: 20px;
     
 }
+.content h2{
+    color: white ;
+    font-size: 15px;
+    
+}
 
 
 .images{
@@ -158,7 +164,7 @@ nav ul li a:hover{
 .about .main .box-container .box p{
     font-size: 15px;
     color:white;
-    padding: 10px 0;
+    padding: 6px;
 }
 .about img{
     height: auto;
@@ -192,10 +198,11 @@ nav ul li a:hover{
 }
 .about-text p{
     color:grey;
-    font-size: 18px;
+    font-size: 17px;
     margin-bottom: 45px;
     line-height: 28px;
     letter-spacing: 1px;
+    text-align: justify;
 }
 
 
@@ -238,8 +245,8 @@ nav ul li a:hover{
     height:30px;
     margin-left: 130px;
     margin-right: 50px;
-    /* padding:.5rem;
-    margin:1rem 0; */
+    padding:.5rem;
+    margin:1rem 0;
 }
 
 .skills .row .progress .bar span{
@@ -254,15 +261,15 @@ nav ul li a:hover{
 }
 
 .skills .row .progress .bar-1-2 span{
-    width: 30%;
+    width: 65%;
 }
 
 .skills .row .progress .bar-2-1 span{
-    width: 75%;
+    width: 70%;
 }
 
 .skills .row .progress .bar-2-2 span{
-    width: 60%;
+    width: 55%;
 }
 
 .skills .row .progress .bar-2-3 span{
@@ -326,6 +333,8 @@ nav ul li a:hover{
     box-shadow:.4rem .4rem 1rem #ccc inset,
     -.4rem -.4rem 1rem #fff inset;
 }
-.footer{
+.container-fluid{
     height: 100px;
+    background-color: black;
+    color: rgb(170, 168, 168);
 }

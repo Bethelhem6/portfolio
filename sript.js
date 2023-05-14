@@ -1,29 +1,25 @@
-const rv=ScrollReveal({
-    distance :'80px',
-    duration: 2800,
-    reset: true,
+const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
+const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
+const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
+const header = document.querySelector('.header.container');
 
+hamburger.addEventListener('click', () => {
+	hamburger.classList.toggle('active');
+	mobile_menu.classList.toggle('active');
+});
 
-})
+document.addEventListener('scroll', () => {
+	var scroll_position = window.scrollY;
+	if (scroll_position > 250) {
+		header.style.backgroundColor = '#29323c';
+	} else {
+		header.style.backgroundColor = 'transparent';
+	}
+});
 
-// rv.reveal('.content, .name',{delay:300, origin:'bottom'}),
-
-function validateForm() {
-    let name = document.forms["myForm"]["fname"].value;
-  
-    if (document.myForm.fname.value =="") {
-      alert("Name must be filled out");
-      document.myForm.fname.focus();
-      return false;
-    }
-    else if (document.forms["myForm"]["subject"].value==""){
-        alert('subject is missing');
-    }
-    else
-    if(document.forms["myForm"]["message"].value==""){
-        alert('please write your message');
-    }
-    else{
-        alert(" your message has been successfully sent.")
-    }
-}
+menu_item.forEach((item) => {
+	item.addEventListener('click', () => {
+		hamburger.classList.toggle('active');
+		mobile_menu.classList.toggle('active');
+	});
+});
